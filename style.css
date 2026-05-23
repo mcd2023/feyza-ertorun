@@ -1,0 +1,282 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Playfair Display',serif;
+  background:#f6f2ee;
+  color:#1b1b1b;
+  line-height:1.9;
+}
+
+/* 🌿 BACKGROUND */
+.sprout-bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:radial-gradient(circle, #b9e6b9 0%, transparent 60%);
+  opacity:.25;
+  z-index:-1;
+}
+
+/* HEADER */
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+/* LOGO */
+.logo{
+  background:#000;
+  color:#fff;
+  padding:10px 14px;
+  border-radius: 50%;
+  font-weight:600;
+}
+
+/* TITLE */
+.title{
+  font-size:26px;
+  letter-spacing:1px;
+  text-align:center;
+  flex:1;
+}
+
+/* WHATSAPP BUTTON (HEADER) */
+.whatsapp-btn{
+  background:#25D366;
+  padding:10px 14px;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:13px;
+  transition:0.3s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.whatsapp-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* META */
+.meta{
+  text-align:center;
+  font-size:13px;
+  opacity:.6;
+  margin-top:5px;
+}
+
+/* ARTICLE */
+main{
+  display:flex;
+  justify-content:center;
+  padding:30px;
+}
+
+.story{
+  max-width:800px;
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.story p{
+  margin-bottom:18px;
+  font-size:18px;
+}
+
+/* IMAGE */
+.imgbox img{
+  width:100%;
+  border-radius:12px;
+  margin:25px 0;
+  transition:0.4s ease;
+}
+
+.imgbox img:hover{
+  transform:scale(1.02);
+}
+
+/* SOCIAL BUTTONS */
+.social{
+  text-align:center;
+  padding:50px;
+}
+
+/* BUTTON BASE */
+.btn{
+  display:inline-block;
+  margin:0 10px;
+  padding:12px 18px;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:14px;
+
+  opacity:0;
+  transform:translateY(10px);
+  animation:fadeIn 1.2s forwards;
+  transition:0.3s ease;
+}
+
+/* INSTAGRAM */
+.instagram{
+  animation-delay:0.3s;
+  background:#E1306C;
+  color:#fff;
+}
+
+/* MAIL */
+.mail{
+  animation-delay:0.6s;
+  background:#333;
+  color:#fff;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  opacity:1;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* TOP BUTTON */
+#topBtn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:12px;
+  border:none;
+  border-radius:50%;
+  background:#000;
+  color:#fff;
+  display:none;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:13px;
+  opacity:.7;
+  border-top:1px solid #ddd;
+  margin-top:50px;
+}
+
+.footer-links{
+  margin-top:10px;
+}
+
+.footer-links a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.footer-links a:hover{
+  color:#000;
+}
+
+/* LEGAL SECTIONS */
+.legal{
+  max-width:800px;
+  margin:40px auto;
+  padding:20px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.legal h2{
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+@media (max-width: 768px){
+
+  /* HEADER */
+  .top{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+
+  .title{
+    font-size:20px;
+    order:2;
+  }
+
+  .logo{
+    order:1;
+  }
+
+  .whatsapp-btn{
+    order:3;
+    font-size:12px;
+    padding:8px 12px;
+  }
+
+  /* STORY CONTAINER */
+  main{
+    padding:15px;
+  }
+
+  .story{
+    padding:20px;
+    border-radius:10px;
+  }
+
+  .story p{
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  /* IMAGES */
+  .imgbox img{
+    margin:15px 0;
+  }
+
+  /* SOCIAL BUTTONS */
+  .social{
+    padding:30px 10px;
+  }
+
+  .btn{
+    display:block;
+    margin:10px auto;
+    width:80%;
+  }
+
+  /* TOP BUTTON */
+  #topBtn{
+    bottom:15px;
+    right:15px;
+    padding:10px;
+  }
+}
+
+@media (max-width: 1024px){
+
+  .story{
+    max-width:90%;
+    padding:30px;
+  }
+
+  .title{
+    font-size:22px;
+  }
+}
